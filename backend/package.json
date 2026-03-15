@@ -1,0 +1,35 @@
+{
+  "name": "studytracker-backend",
+  "version": "1.0.0",
+  "description": "Backend API for StudyTracker - A comprehensive academic monitoring system for parents to track their child's educational progress, including grades, attendance, fees, and AI-powered insights.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "seed": "node seed.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "education",
+    "academic-tracking",
+    "parent-portal",
+    "student-monitoring",
+    "express",
+    "mongodb",
+    "openai",
+    "otp-authentication"
+  ],
+  "author": "StudyTracker Team",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.0",
+    "openai": "^6.29.0",
+    "otp-generator": "^4.0.1",
+    "twilio": "^5.13.0"
+  }
+}
