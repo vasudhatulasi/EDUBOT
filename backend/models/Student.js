@@ -71,7 +71,12 @@ const studentSchema = new mongoose.Schema({
     paid: Number,
     pending: Number,
     status: String,
-    dueDate: Date
+    dueDate: Date,
+    scholarship: {
+      amount: Number,
+      type: String,
+      description: String
+    }
   },
 
   // Coding profile data (e.g., LeetCode / CodeChef performance)

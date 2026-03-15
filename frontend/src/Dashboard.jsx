@@ -671,6 +671,18 @@ export default function Dashboard() {
                   <span>Due Date</span>
                   <span>{student?.fees?.dueDate ? new Date(student.fees.dueDate).toLocaleDateString() : "-"}</span>
                 </div>
+                <div className="summary-row">
+                  <span>Scholarship Amount</span>
+                  <span>₹{student?.fees?.scholarship?.amount ?? "-"}</span>
+                </div>
+                <div className="summary-row">
+                  <span>Scholarship Type</span>
+                  <span>{student?.fees?.scholarship?.type ?? "-"}</span>
+                </div>
+                <div className="summary-row">
+                  <span>Scholarship Description</span>
+                  <span>{student?.fees?.scholarship?.description ?? "-"}</span>
+                </div>
               </section>
             )}
 

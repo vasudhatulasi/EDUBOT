@@ -98,7 +98,12 @@ const sampleStudents = [
       paid: 45000,
       pending: 15000,
       status: "Due",
-      dueDate: new Date(new Date().setDate(new Date().getDate() + 24))
+      dueDate: new Date(new Date().setDate(new Date().getDate() + 24)),
+      scholarship: {
+        amount: 5000,
+        type: "Merit",
+        description: "Academic excellence scholarship"
+      }
     },
     codingProfile: {
       leetcode: {
@@ -204,7 +209,12 @@ const sampleStudents = [
       paid: 60000,
       pending: 0,
       status: "Paid",
-      dueDate: new Date()
+      dueDate: new Date(),
+      scholarship: {
+        amount: 10000,
+        type: "Need-based",
+        description: "Financial aid scholarship"
+      }
     },
     codingProfile: {
       leetcode: {
