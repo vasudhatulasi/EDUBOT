@@ -167,7 +167,15 @@ const sampleStudents = [
         description: "Online quiz on graph algorithms",
         status: "Pending"
       }
-    ]
+    ],
+    counsellor: {
+      name: "Dr. Sarah Johnson",
+      email: "sarah.johnson@university.edu",
+      phone: "9876543210",
+      department: "Computer Science",
+      officeHours: "Mon-Fri 10AM-12PM",
+      specialization: "Academic Counseling & Career Guidance"
+    }
   },
   {
     regNo: "2022002",
@@ -284,7 +292,15 @@ const sampleStudents = [
         description: "Solve problems from chapter 3",
         status: "Submitted"
       }
-    ]
+    ],
+    counsellor: {
+      name: "Prof. Michael Chen",
+      email: "michael.chen@university.edu",
+      phone: "9876543211",
+      department: "Information Technology",
+      officeHours: "Tue-Thu 2PM-4PM",
+      specialization: "Student Support & Academic Advising"
+    }
   }
 ];
 

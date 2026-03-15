@@ -813,6 +813,22 @@ export default function Dashboard() {
               <p className="muted">No upcoming assessments.</p>
             )}
           </div>
+
+          <div className="card">
+            <h3>Academic Counsellor</h3>
+            {student?.counsellor ? (
+              <div className="space-y-2">
+                <p className="event-title">{student.counsellor.name}</p>
+                <p className="muted text-sm">{student.counsellor.department}</p>
+                <p className="muted text-xs">📧 {student.counsellor.email}</p>
+                <p className="muted text-xs">📞 {student.counsellor.phone}</p>
+                <p className="muted text-xs">🕒 {student.counsellor.officeHours}</p>
+                <p className="muted text-xs">{student.counsellor.specialization}</p>
+              </div>
+            ) : (
+              <p className="muted">No counsellor assigned.</p>
+            )}
+          </div>
         </div>
       </aside>
     </div>

@@ -46,6 +46,15 @@ const assessmentSchema = new mongoose.Schema({
   status: String // e.g., "Pending", "Submitted", "Overdue"
 });
 
+const counsellorSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  phone: String,
+  department: String,
+  officeHours: String,
+  specialization: String
+});
+
 const notificationSchema = new mongoose.Schema({
   title: String,
   message: String,
@@ -109,7 +118,8 @@ const studentSchema = new mongoose.Schema({
 
   notifications: [notificationSchema],
   upcomingExams: [examSchema],
-  assessments: [assessmentSchema]
+  assessments: [assessmentSchema],
+  counsellor: counsellorSchema
 });
 
 module.exports = mongoose.model("Student", studentSchema);
