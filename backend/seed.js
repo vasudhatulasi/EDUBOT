@@ -149,6 +149,24 @@ const sampleStudents = [
         subjects: ["Algorithms", "Operating Systems"],
         description: "Covers entire syllabus."
       }
+    ],
+    assessments: [
+      {
+        title: "Data Structures Assignment",
+        type: "Assignment",
+        subject: "Data Structures",
+        deadline: new Date(new Date().setDate(new Date().getDate() + 7)),
+        description: "Implement sorting algorithms",
+        status: "Pending"
+      },
+      {
+        title: "Algorithms Quiz",
+        type: "Quiz",
+        subject: "Algorithms",
+        deadline: new Date(new Date().setDate(new Date().getDate() + 10)),
+        description: "Online quiz on graph algorithms",
+        status: "Pending"
+      }
     ]
   },
   {
@@ -247,6 +265,24 @@ const sampleStudents = [
         date: new Date(new Date().setDate(new Date().getDate() + 12)),
         subjects: ["Programming Fundamentals", "Mathematics"],
         description: "Exam will be conducted in the main hall."
+      }
+    ],
+    assessments: [
+      {
+        title: "Programming Project",
+        type: "Project",
+        subject: "Programming Fundamentals",
+        deadline: new Date(new Date().setDate(new Date().getDate() + 14)),
+        description: "Build a simple calculator application",
+        status: "Pending"
+      },
+      {
+        title: "Math Homework",
+        type: "Assignment",
+        subject: "Mathematics",
+        deadline: new Date(new Date().setDate(new Date().getDate() + 5)),
+        description: "Solve problems from chapter 3",
+        status: "Submitted"
       }
     ]
   }

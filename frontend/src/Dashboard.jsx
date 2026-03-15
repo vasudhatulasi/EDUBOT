@@ -386,6 +386,15 @@ export default function Dashboard() {
     return upcoming[0];
   }, [student]);
 
+  const upcomingAssessments = useMemo(() => {
+    if (!student?.assessments?.length) return [];
+    const now = new Date();
+    return student.assessments
+      .filter((a) => a.deadline && new Date(a.deadline) >= now)
+      .sort((a, b) => new Date(a.deadline) - new Date(b.deadline))
+      .slice(0, 3); // Show top 3 upcoming
+  }, [student]);
+
   return (
     <div className="dashboard">
       <aside className="sidebar">
@@ -780,6 +789,28 @@ export default function Dashboard() {
               </>
             ) : (
               <p className="muted">No upcoming exams scheduled.</p>
+            )}
+          </div>
+
+          <div className="card">
+            <h3>Upcoming Assessments</h3>
+            {upcomingAssessments.length > 0 ? (
+              <ul className="space-y-2">
+                {upcomingAssessments.map((assessment, index) => (
+                  <li key={index} className="border-b border-white/10 pb-2 last:border-b-0">
+                    <p className="event-title text-sm">{assessment.title}</p>
+                    <p className="muted text-xs">
+                      {assessment.subject} • {assessment.type}
+                    </p>
+                    <p className="muted text-xs">
+                      Due: {new Date(assessment.deadline).toLocaleDateString()}
+                    </p>
+                    <p className="muted text-xs">{assessment.description}</p>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className="muted">No upcoming assessments.</p>
             )}
           </div>
         </div>
